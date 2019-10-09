@@ -1,31 +1,33 @@
 import React, { useState } from "react";
 
-const NoteForm = props => {
-  const [note, setNote] = useState({ title: "" });
+const Form = props => {
+  const [team, setTeam] = useState({ name: "" });
   const handleChange = evt => {
-    setNote({ title: evt.target.value });
+    setTeam({ name: evt.target.value });
   };
-  const handleTitleChange = evt => {
-    setNote({...note, title: evt.target.value});
+  const handleEmailChange = evt => {
+    setTeam({...team, email: evt.target.value});
   };
 
-  const handleBodyChange = evt => {
-    setNote({...note, body: evt.target.value});
+  const handleRoleChange = evt => {
+    setTeam({...team, role: evt.target.value});
   };
   const handleSubmit = evt => {
     evt.preventDefault();
-    props.addNoteFn(note);
-    setNote({title:"", body:""});
+    props.addTeamFn(team);
+    setTeam({name:"", email:"", role:""});
   }
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="title">Note Title</label>
-      <input id="title" value={note.title} name="title" type="text" onChange={handleChange} />
-      <label htmlFor="note">Note</label>
-      <input id="note" value={note.body} type="textarea" name="body" onChange={handleBodyChange}/>
-      <button type="submit">Add Note</button>
+      <label htmlFor="name">Teammember Name</label>
+      <input id="name" value={team.name} name="name" type="text" onChange={handleChange} />
+      <label htmlFor="email">Email</label>
+      <input id="email" value={team.email} type="text" name="email" onChange={handleEmailChange}/>
+      <label htmlFor="role">Role</label>
+      <input id="role" value={team.role} type="text" name="role" onChange={handleRoleChange}/>
+      <button type="submit">Add Teammember</button>
     </form>
   );
 };
 
-export default NoteForm;
+export default Form;

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap');
+
+html,
+body,
+.App,
+#root {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  font-family: 'Patrick Hand', cursive;
+  text-align: center;
+  background-image: linear-gradient(-315deg, #ff7a97bd 40%,#d74198 100%);
+  padding: 32px;
+  letter-spacing: 2px
+}
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.team {
+  background: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12), 0 5px 2px rgba(0, 0, 0, 0.24);
+  width: 100%;
+  max-width: 250px;
+  padding: 10px;
+  margin: 16px auto;
+  text-align: left;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+input, textarea {
+  width: 200px;
+  padding: 15px 22px;
+  margin: 10px 5px;
+  box-sizing: border-box;  
+  border: 1px solid #ff65a3;
+  border-radius: 4px;
+}
+button {
+  background: #82ff7e;
+  background-image: linear-gradient(-315deg, #7effc3 40%,#65ffb2 100%);
+  border: 1px solid #72ff65;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #191919;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.12), 0 2px 2px 1px rgba(0, 0, 0, 0.24);
+  transition: all 0.2 ease-in;
+}
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.12), 0 2px 3px 2px rgba(0, 0, 0, 0.24);
+  background: #91ff65;
+}
+button:active {
+  background: #7effee;
+          box-shadow: inset 0px 0px 5px #8665ff;
+   outline: none;
+}
+
+label {
+  margin-bottom: -12px;
+  text-align: left;
+  width: 200px;
+}

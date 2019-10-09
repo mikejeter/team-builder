@@ -1,18 +1,19 @@
 import React from "react";
 
-const Notes = props => {
+const Team = props => {
   console.log(props);
   return (
-    <div className="note-list">
-      {props.notesList.map(note => {
-        return (
-          <div className="note" key={note.id}>
-            <h2>{note.title}</h2>
-            <p>{note.body}</p>
+    <div className="team-list">
+      {props.teamList.map(team => {
+          return (
+          <div className="team" key={team.id}>
+              <h2>{team.name}</h2>
+              <h2>{team.email}</h2>
+              <h2>{team.role}</h2>
           </div>
-        );
+          );
       })}
     </div>
   );
 };
-export default Notes;
+export default Team;
