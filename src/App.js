@@ -1,24 +1,20 @@
 import React, { useState } from "react";
 import Team from "./components/Team";
 import Form from "./components/Form";
+import {data} from "./data";
 import "./styles.scss";
 
 
 function App() {
   const [team, setTeam] = useState([
-    {
-      id: 1,
-      name: "Michael Jeter",
-      email: "mjeter45@yahoo.com",
-      role: "Full Stack Web Developer"
-    }
+   ...data 
   ]);
-  const addTeam = team => {
+  const addTeam = teams => {
     const newTeam = {
       id: Date.now(),
-      name: team.name,
-      email: team.email,
-      role: team.role,
+      name: teams.name,
+      email: teams.email,
+      role: teams.role,
     }
     setTeam([...team, newTeam])
   }

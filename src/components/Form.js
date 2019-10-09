@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Form = props => {
-  const [team, setTeam] = useState({ name: "" });
+  const [team, setTeam] = useState({ name: "", email:"", role:"" });
   const handleChange = evt => {
     setTeam({ name: evt.target.value });
   };
